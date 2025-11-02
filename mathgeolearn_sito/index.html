@@ -3,40 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MathGeoLearn: La Tua Piattaforma di Matematica e Geometria</title>
+    <meta name="description" content="MathGeoLearn: Il tuo portale didattico gratuito per padroneggiare Algebra, Geometria e Analisi. Lezioni chiare, formule in LaTeX e spiegazioni dettagliate.">
+    <title>MathGeoLearn | Padroneggia Algebra, Geometria e Analisi</title>
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-GvrFk5J72B00E7J+g/lQJ4O0P9Z+x2a1R9Kq6Zp0PjL2Bf1p2B9W3v/D/jP1p/Q==" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-GvrFk5J72B00E7J+g/lQJ4O0P9Z+x2a1R9Kq6Zp0P9J9O0S2" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
     <header>
         <h1>MathGeoLearn</h1>
         <nav>
-            <a href="/algebra">Algebra</a>
-            <a href="/geometria">Geometria</a>
+            <a href="index.html">Home</a>
+            <a href="algebra/algebra.html">Algebra</a> 
+            <a href="geometria/geometria.html">Geometria</a>
         </nav>
     </header>
 
     <main>
-        <h2>La Formula Quadratica</h2>
-        <span id="formula-quadratica"></span>
+        <section class="hero" style="text-align: center; background-color: #e9f5ff; padding: 40px 20px; margin-bottom: 30px; border-radius: 8px;">
+            <h2>Benvenuto su MathGeoLearn: La Tua Mappa della Matematica 🗺️</h2>
+            <p style="font-size: 1.1em; max-width: 800px; margin: 15px auto;">Che tu sia uno studente o un appassionato, qui troverai lezioni concise e rigorose su tutti i pilastri della matematica. Basta confusione: solo chiarezza.</p>
+            <p><strong>Inizia il tuo percorso scegliendo un'area tematica qui sotto.</strong></p>
+        </section>
+
+        <h3>Esplora le Nostre Aree Tematiche</h3>
+        
+        <div class="topic-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+            
+            <div class="topic-card" style="border: 1px solid #004a7c; border-left: 5px solid #ffcc00; padding: 15px; border-radius: 4px;">
+                <h4>✖️ Algebra</h4>
+                <p>Equazioni di primo e secondo grado, polinomi, sistemi lineari e molto altro. La base di ogni calcolo.</p>
+                <a href="algebra/algebra.html" class="button" style="color: #004a7c; font-weight: bold;">Vai ad Algebra &rarr;</a>
+            </div>
+            
+            <div class="topic-card" style="border: 1px solid #004a7c; border-left: 5px solid #ffcc00; padding: 15px; border-radius: 4px;">
+                <h4>📐 Geometria</h4>
+                <p>Triangoli, circonferenze, volumi e figure nello spazio. Tutte le leggi che regolano lo spazio.</p>
+                <a href="geometria/geometria.html" class="button" style="color: #004a7c; font-weight: bold;">Vai a Geometria &rarr;</a>
+            </div>
+
+            <div class="topic-card" style="border: 1px solid #004a7c; border-left: 5px solid #ffcc00; padding: 15px; border-radius: 4px;">
+                <h4>📈 Analisi</h4>
+                <p>Limiti, derivate e integrali. Approfondisci il concetto di infinito e di variazione.</p>
+                <a href="analisi/analisi.html" class="button" style="color: #004a7c; font-weight: bold;">Vai ad Analisi &rarr;</a>
+            </div>
+        </div>
     </main>
 
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" integrity="sha384-F8r+d9E3/vC4a/d6F9q6hW7p8U1A5/D/jQ2B3p2Wp1Q7M0Q1p3O1C7D1P9J9O0S2" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" integrity="sha384-F8r+d9E3/vC4a/d6G/lP7t8G6T8B7v/J8P1C9D2E9G0S2" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" integrity="sha384-G4R1N/1vE7J/Vp9r/j3B1p1W2G6T2p9M+M1P5N9v2Y4Q7G9P8W3V/J9V3O1C7D1P9J9O0S2" crossorigin="anonymous"></script>
-    
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Formula quadratica in LaTeX
-            const latexFormula = "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}";
-            
-            // Renderizza la formula nel <span>
-            katex.render(latexFormula, document.getElementById("formula-quadratica"), {
-                displayMode: true, // Usa modalità display (centrata e grande)
-                throwOnError: false
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true}, 
+                    {left: '$', right: '$', display: false}, 
+                ],
+                throwOnError : false
             });
         });
     </script>
+    <footer>
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h3>MathGeoLearn</h3>
+            <p>Il tuo portale didattico gratuito per Algebra, Geometria e Analisi. Lezioni chiare e focus sulla comprensione rigorosa.</p>
+        </div>
+        
+        <div class="footer-section links">
+            <h3>Link Rapidi</h3>
+            <ul>
+                <li><a href="URL_PER_CONTATTI">Contatti e Supporto</a></li>
+                <li><a href="URL_PER_PRIVACY">Informativa sulla Privacy</a></li>
+                <li><a href="URL_PER_TERMINI">Termini di Servizio</a></li>
+                <li><a href="#">Novità dal Blog</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section social">
+            <h3>Seguici</h3>
+            <p>Rimani aggiornato sulle nuove lezioni e risorse.</p>
+            <a href="URL_FACEBOOK" target="_blank">[Icona Facebook]</a>
+            <a href="URL_TWITTER" target="_blank">[Icona Twitter/X]</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        &copy; 2025 MathGeoLearn. Tutti i diritti riservati. Realizzato con HTML, CSS e KaTeX.
+    </div>
+</footer>
 </body>
 </html>
