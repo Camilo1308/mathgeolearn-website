@@ -1,0 +1,75 @@
+Certo, ecco il codice completo per implementare la formula quadratica come lezione su mathgeolearn.com, utilizzando HTML per la struttura, CSS per lo stile e KaTeX/JavaScript per visualizzare le formule.Questo codice è basato sul file argomenti/algebra/equazioni/formula-quadratica.html che si adatta alla struttura di navigazione che abbiamo definito.1. 📄 Struttura HTML e Formule ($\LaTeX$)Questo è il codice per la pagina, che include la formula standard e la formula risolutiva. Assicurati che il percorso del file CSS sia corretto (../../../styles.css).HTML<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Scopri la formula risolutiva per le equazioni di secondo grado. Spiegazione dettagliata, discriminante e casi pratici.">
+    <title>Formula Quadratica per Equazioni di Secondo Grado | MathGeoLearn</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-GvrFk5J72B00E7J+g/lQJ4O0P9Z+x2a1R9Kq6Zp0P9J9O0S2" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../../styles.css"> 
+</head>
+<body>
+    <header>
+        <h1>MathGeoLearn</h1>
+        <nav>
+            <a href="../../../index.html">Home</a>
+            <a href="../../../algebra/equazioni/formula-quadratica.html">Algebra</a>
+            <a href="../../../geometria/piana/pitagora.html">Geometria</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="breadcrumbs">
+            <a href="../../../index.html">Home</a> &gt; 
+            <a href="../algebra.html">Algebra</a> &gt; 
+            <span class="current-page">Formula Quadratica</span>
+        </div>
+
+        <h2>La Formula Risolutiva: Equazioni di Secondo Grado</h2>
+        
+        <p>L'equazione quadratica in forma standard è espressa come:</p>
+
+        <p class="formula-block" id="eq-standard"></p>
+
+        <p>dove $a$, $b$, e $c$ sono coefficienti reali ($a \neq 0$) e $x$ è l'incognita. La soluzione per $x$ si ottiene attraverso la **formula risolutiva**.</p>
+
+        <h3>La Formula Risolutiva Principale</h3>
+
+        <div class="formula-block" id="formula-risolutiva"></div>
+
+        <p>Il termine sotto radice, $\Delta = b^2 - 4ac$, è chiamato **Discriminante**. Esso determina la natura delle soluzioni dell'equazione.</p>
+        
+        </main>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" integrity="sha384-F8r+d9E3/vC4a/d6G/lP7t8G6T8B7v/J8P1C9D2E9G0S2" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" integrity="sha384-G4R1N/1vE7J/Vp9r/j3B1p1W2G6T2p9M+M1P5N9v2Y4Q7G9P8W3V/J9V3O1C7D1P9J9O0S2" crossorigin="anonymous"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Formula Standard (ax^2 + bx + c = 0)
+            const eqStandard = "ax^2 + bx + c = 0";
+            katex.render(eqStandard, document.getElementById("eq-standard"), {
+                displayMode: true,
+                throwOnError: false
+            });
+            
+            // Formula Risolutiva (la Formula Quadratica)
+            const latexFormula = "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}";
+            katex.render(latexFormula, document.getElementById("formula-risolutiva"), {
+                displayMode: true, // Importante per la visualizzazione centrata
+                throwOnError: false
+            });
+            
+            // Rendering delle formule inline ($ \Delta $)
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true}, // Per blocchi di codice non gestiti sopra
+                    {left: '$', right: '$', display: false},  // Per formule all'interno del testo
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+</body>
+</html>

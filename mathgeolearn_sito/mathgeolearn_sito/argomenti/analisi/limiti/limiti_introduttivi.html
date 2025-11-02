@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Spiegazione del concetto fondamentale di limite in Analisi Matematica e la notazione corretta.">
+    <title>Concetto di Limite e Notazione | MathGeoLearn</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-GvrFk5J72B00E7J+g/lQJ4O0P9Z+x2a1R9Kq6Zp0P9J9O0S2" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../styles.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>MathGeoLearn</h1>
+        <nav>
+            <a href="../../index.html">Home</a>
+            <a href="../../algebra/algebra.html">Algebra</a>
+            <a href="../../geometria/geometria.html">Geometria</a>
+            <a href="../analisi.html">Analisi</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="breadcrumbs">
+            <a href="../../index.html">Home</a> &gt; 
+            <a href="../analisi.html">Analisi</a> &gt; 
+            <span class="current-page">Concetto di Limite</span>
+        </div>
+
+        <h2>Il Concetto Fondamentale di Limite</h2>
+        
+        <p>In Analisi, il limite descrive il comportamento di una funzione $f(x)$ quando l'argomento $x$ si avvicina ad un certo punto $x_0$. Non ci interessa il valore della funzione *nel* punto $x_0$, ma *attorno* ad esso.</p>
+
+        <h3>La Notazione Standard</h3>
+
+        <p>La notazione usata per esprimere il limite di una funzione è la seguente:</p>
+        
+        <div class="formula-block" id="notazione-limite"></div>
+        
+        <p>Questo si legge: "Il limite di $f(x)$ per $x$ tendente a $x_0$ è uguale a $L$."</p>
+
+        <h3>Esempio Pratico</h3>
+        <p>Consideriamo un semplice esempio per capire la tendenza. Se $f(x) = \frac{x^2 - 1}{x - 1}$, il limite per $x$ che tende a $1$ è 2, anche se la funzione non è definita in $x=1$. Scriveremo:</p>
+
+        <div class="formula-block" id="esempio-limite"></div>
+
+    </main>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" integrity="sha384-F8r+d9E3/vC4a/d6G/lP7t8G6T8B7v/J8P1C9D2E9G0S2" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" integrity="sha384-G4R1N/1vE7J/Vp9r/j3B1p1W2G6T2p9M+M1P5N9v2Y4Q7G9P8W3V/J9V3O1C7D1P9J9O0S2" crossorigin="anonymous"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            
+            // Notazione di Limite (principale)
+            const notazioneLimite = "\\lim_{x \\to x_0} f(x) = L";
+            katex.render(notazioneLimite, document.getElementById("notazione-limite"), {
+                displayMode: true,
+                throwOnError: false
+            });
+
+            // Esempio di Limite
+            const esempioLimite = "\\lim_{x \\to 1} \\frac{x^2 - 1}{x - 1} = 2";
+            katex.render(esempioLimite, document.getElementById("esempio-limite"), {
+                displayMode: true,
+                throwOnError: false
+            });
+            
+            // Rendering delle formule inline
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true}, 
+                    {left: '$', right: '$', display: false}, 
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+</body>
+</html>

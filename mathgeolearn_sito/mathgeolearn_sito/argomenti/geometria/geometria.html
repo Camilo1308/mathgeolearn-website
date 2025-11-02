@@ -1,0 +1,81 @@
+Perfetto! Creare una pagina di indice per ogni macro-area è fondamentale per l'organizzazione e la SEO, poiché stabilisce la gerarchia tematica e funge da "hub" di navigazione.
+
+Creiamo il file geometria/geometria.html. Questa pagina sarà la porta d'accesso per tutti gli argomenti di Geometria (Piana, Solida, Analitica, ecc.) e linkerà alla lezione specifica sul Teorema di Pitagora.
+
+1. 🌐 Codice Pagina Indice: geometria/geometria.html
+HTML
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tutte le lezioni e le risorse di Geometria: Piana, Solida e Analitica. Inizia ora il tuo percorso da Pitagora ai vettori.">
+    <title>Geometria: Piana, Solida, Analitica | MathGeoLearn</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-GvrFk5J72B00E7J+g/lQJ4O0P9Z+x2a1R9Kq6Zp0P9J9O0S2" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles.css"> 
+</head>
+<body>
+    <header>
+        <h1>MathGeoLearn</h1>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../algebra/equazioni/formula-quadratica.html">Algebra</a>
+            <a href="geometria.html">Geometria</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="breadcrumbs">
+            <a href="../index.html">Home</a> &gt; 
+            <span class="current-page">Geometria</span>
+        </div>
+
+        <h2>Il Mondo della Geometria</h2>
+        
+        <p>Esplora la Geometria in tutte le sue sfaccettature. Dalle forme piane elementari alle strutture nello spazio e ai vettori. Scegli l'area che ti interessa per accedere alle lezioni dettagliate.</p>
+
+        <section class="topic-section">
+            <h3>🔲 Geometria Piana</h3>
+            <p>Lo studio delle figure bidimensionali: triangoli, quadrilateri e cerchi. Concentrati su aree, perimetri e relazioni fondamentali.</p>
+            
+            <ul class="lesson-list">
+                <li>
+                    <a href="piana/pitagora.html">
+                        **Teorema di Pitagora:** La relazione fondamentale tra i lati del triangolo rettangolo.
+                    </a>
+                </li>
+                <li><a href="#">Aree e Perimetri delle Figure Piane</a></li>
+                <li><a href="#">Teoremi di Euclide</a></li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section class="topic-section">
+            <h3>🧊 Geometria Solida</h3>
+            <p>Analisi delle forme tridimensionali come cubi, piramidi e sfere. Impara a calcolare volumi e superfici.</p>
+            <ul class="lesson-list">
+                <li><a href="#">Calcolo di Volumi (Cubo e Cilindro)</a></li>
+                <li><a href="#">Sezioni Coniche</a></li>
+            </ul>
+        </section>
+
+    </main>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" integrity="sha384-F8r+d9E3/vC4a/d6G/lP7t8G6T8B7v/J8P1C9D2E9G0S2" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" integrity="sha384-G4R1N/1vE7J/Vp9r/j3B1p1W2G6T2p9M+M1P5N9v2Y4Q7G9P8W3V/J9V3O1C7D1P9J9O0S2" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true}, 
+                    {left: '$', right: '$', display: false}, 
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+</body>
+</html>

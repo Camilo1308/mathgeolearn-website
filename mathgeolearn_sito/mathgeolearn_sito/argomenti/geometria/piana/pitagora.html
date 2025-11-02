@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Impara il Teorema di Pitagora, la formula fondamentale per calcolare i lati del triangolo rettangolo. Spiegazione e formula in LaTeX.">
+    <title>Teorema di Pitagora per Triangoli Rettangoli | MathGeoLearn</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-GvrFk5J72B00E7J+g/lQJ4O0P9Z+x2a1R9Kq6Zp0P9J9O0S2" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../styles.css"> 
+</head>
+<body>
+    <header>
+        <h1>MathGeoLearn</h1>
+        <nav>
+            <a href="../../index.html">Home</a>
+            <a href="../../algebra/equazioni/formula-quadratica.html">Algebra</a>
+            <a href="pitagora.html">Geometria</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="breadcrumbs">
+            <a href="../../index.html">Home</a> &gt; 
+            <a href="../geometria.html">Geometria</a> &gt; 
+            <span class="current-page">Teorema di Pitagora</span>
+        </div>
+
+        <h2>Il Teorema di Pitagora</h2>
+        
+        <p>Il Teorema di Pitagora è la legge fondamentale della geometria euclidea che lega le lunghezze dei tre lati di un **triangolo rettangolo**. Afferma che l'area del quadrato costruito sull'ipotenusa è pari alla somma delle aree dei quadrati costruiti sui due cateti.</p>
+
+        <div class="image-container" style="text-align: center; margin: 30px 0;"><p style="font-style: italic; font-size: 0.9em; margin-top: 5px;">I cateti sono 'a' e 'b'; l'ipotenusa è 'c'.</p>
+        </div>
+
+        <h3>La Formula Fondamentale</h3>
+
+        <p>In termini algebrici, se indichiamo i cateti con $a$ e $b$, e l'ipotenusa (il lato opposto all'angolo retto) con $c$, la formula è:</p>
+        
+        <div class="formula-block" id="formula-pitagora"></div>
+        
+        <p>Da questa relazione è possibile ricavare la lunghezza di qualsiasi lato conoscendo gli altri due. Ad esempio, per trovare l'ipotenusa $c$, si usa la formula inversa:</p>
+
+        <div class="formula-block" id="formula-ipotenusa"></div>
+
+    </main>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" integrity="sha384-F8r+d9E3/vC4a/d6G/lP7t8G6T8B7v/J8P1C9D2E9G0S2" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" integrity="sha384-G4R1N/1vE7J/Vp9r/j3B1p1W2G6T2p9M+M1P5N9v2Y4Q7G9P8W3V/J9V3O1C7D1P9J9O0S2" crossorigin="anonymous"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            
+            // Formula di Pitagora (principale)
+            const formulaPitagora = "a^2 + b^2 = c^2";
+            katex.render(formulaPitagora, document.getElementById("formula-pitagora"), {
+                displayMode: true,
+                throwOnError: false
+            });
+
+            // Formula Inversa (per l'ipotenusa)
+            const formulaIpotenusa = "c = \\sqrt{a^2 + b^2}";
+            katex.render(formulaIpotenusa, document.getElementById("formula-ipotenusa"), {
+                displayMode: true,
+                throwOnError: false
+            });
+            
+            // Rendering delle formule inline ($ \Delta $)
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true}, 
+                    {left: '$', right: '$', display: false}, 
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+</body>
+</html>
